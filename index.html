@@ -258,7 +258,80 @@
         //初始化一个粒子轮播特效
         const particale = new Particale({
             warp: document.getElementById('particale-canvas'),
-            imgsUrl: ["imgs/1.jpg", "imgs/2.jpg", "imgs/3.jpg", "imgs/4.jpg", "imgs/5.jpg", "imgs/6.jpg", "imgs/7.jpg"],
+            imgsUrl: [
+                "imgs/img-1.jpg",
+                "imgs/img-2.jpg",
+                "imgs/img-3.jpg",
+                "imgs/img-4.jpg",
+                "imgs/img-5.jpg",
+                "imgs/img-6.jpg",
+                "imgs/img-7.jpg",
+                "imgs/img-8.jpg",
+                "imgs/img-9.jpg",
+                "imgs/img-10.jpg",
+                "imgs/img-11.jpg",
+                "imgs/img-12.jpg",
+                "imgs/img-13.jpg",
+                "imgs/img-14.jpg",
+                "imgs/img-15.jpg",
+                "imgs/img-16.jpg",
+                "imgs/img-17.jpg",
+                "imgs/img-18.jpg",
+                "imgs/img-19.jpg",
+                "imgs/img-20.jpg",
+                "imgs/img-21.jpg",
+                "imgs/img-22.jpg",
+                "imgs/img-23.jpg",
+                "imgs/img-24.jpg",
+                "imgs/img-25.jpg",
+                "imgs/img-26.jpg",
+                "imgs/img-27.jpg",
+                "imgs/img-28.jpg",
+                "imgs/img-29.jpg",
+                "imgs/img-30.jpg",
+                "imgs/img-31.jpg",
+                "imgs/img-32.jpg",
+                "imgs/img-33.jpg",
+                "imgs/img-34.jpg",
+                "imgs/img-35.jpg",
+                "imgs/img-36.jpg",
+                "imgs/img-37.jpg",
+                "imgs/img-38.jpg",
+                "imgs/img-39.jpg",
+                "imgs/img-40.jpg",
+                "imgs/img-41.jpg",
+                "imgs/img-43.jpg",
+                "imgs/img-44.jpg",
+                "imgs/img-45.jpg",
+                "imgs/img-46.jpg",
+                "imgs/img-47.jpg",
+                "imgs/img-48.jpg",
+                "imgs/img-49.jpg",
+                "imgs/img-50.jpg",
+                "imgs/img-51.jpg",
+                "imgs/img-52.jpg",
+                "imgs/img-53.jpg",
+                "imgs/img-54.jpg",
+                "imgs/img-55.jpg",
+                "imgs/img-56.jpg",
+                "imgs/img-57.jpg",
+                "imgs/img-58.jpg",
+                "imgs/img-59.jpg",
+                "imgs/img-60.jpg",
+                "imgs/img-61.jpg",
+                "imgs/img-62.jpg",
+                "imgs/img-63.jpg",
+                "imgs/img-64.jpg",
+                "imgs/img-65.jpg",
+                "imgs/img-66.jpg",
+                "imgs/img-67.jpg",
+                "imgs/img-68.jpg",
+                "imgs/img-69.jpg",
+                "imgs/img-70.jpg",
+                "imgs/img-71.jpg",
+                "imgs/img-72.jpg",
+                "imgs/img-73.jpg"
+            ],
             radius: 1,
         });
     </script>
@@ -352,13 +425,20 @@
         <div class="timer">
             <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
         </div>
+        <h2>小福泥和茶茶 已经领证了</h2>
+        <div class="timer">
+            <b id="d01"></b> Days <b id="h01"></b> Hours <b id="m01"></b> Minutes <b id="s01"></b> Seconds
+        </div>
     </div>
 
     <script>
         function timer() {
             var start = new Date("2017-11-03 00:00:00").getTime();
+            var start01 = new Date("2023-04-28 00:00:00").getTime();
             var t = new Date().getTime() - start;
+            var t01 = new Date().getTime() - start01;
             var h = ~~(t / 1000 / 60 / 60 % 24);
+            var h01 = ~~(t01 / 1000 / 60 / 60 % 24);
             if (h < 10) {
                 h = "0" + h;
             }
@@ -370,10 +450,25 @@
             if (s < 10) {
                 s = "0" + s;
             }
+            if (h01 < 10) {
+                h01 = "0" + h01;
+            }
+            var m01 = ~~(t01 / 1000 / 60 % 60);
+            if (m01 < 10) {
+                m01 = "0" + m01;
+            }
+            var s01 = ~~(t01 / 1000 % 60);
+            if (s01 < 10) {
+                s01 = "0" + s01;
+            }
             document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
             document.getElementById('h').innerHTML = h;
             document.getElementById('m').innerHTML = m;
             document.getElementById('s').innerHTML = s;
+            document.getElementById('d01').innerHTML = ~~(t01 / 1000 / 60 / 60 / 24);
+            document.getElementById('h01').innerHTML = h01;
+            document.getElementById('m01').innerHTML = m01;
+            document.getElementById('s01').innerHTML = s01;
         }
         timer();
         setInterval(timer, 1000);
